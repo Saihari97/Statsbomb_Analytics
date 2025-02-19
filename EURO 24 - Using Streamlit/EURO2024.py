@@ -13,17 +13,18 @@ from mplcursors import cursor
 import mplcursors
 import matplotlib.lines as mlines
 
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+# Get the directory where the script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 ### Reading Input Files:
 ####### Team Level Goals vs xG
-team_df = pd.read_excel('Team Level Stats.xlsx')
+team_df = pd.read_excel(os.path.join(script_dir, 'Team Level Stats.xlsx'))
 
 ####### Player Level Stats: Goals, Assists
-player_df = pd.read_excel('Player Level Stats.xlsx')
+player_df = pd.read_excel(os.path.join(script_dir, 'Player Level Stats.xlsx'))
 
 ######## Shot Map
-shot_map_team = pd.read_excel("Shot Map.xlsx")
+shot_map_team = pd.read_excel(os.path.join(script_dir, "Shot Map.xlsx"))
 
 ### Streamlit 
 # ---- Streamlit UI ----
