@@ -13,6 +13,7 @@ from mplcursors import cursor
 import mplcursors
 import matplotlib.lines as mlines
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 ### Reading Input Files:
 ####### Team Level Goals vs xG
